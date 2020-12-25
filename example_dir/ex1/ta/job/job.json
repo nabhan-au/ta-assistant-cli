@@ -18,6 +18,12 @@
       "score2": "1",
       "comment": "This is a comment for job 2"
     },
-    { "student_id": "12345678", "name": "test", "ex": "ex1", "score1": 500 }
+    {
+      "filename": "123456.zip",
+      "student_id": "12345678",
+      "name": "test",
+      "ex": "ex1",
+      "score1": 500
+    }
   ]
 }
