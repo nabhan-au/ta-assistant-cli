@@ -5,10 +5,11 @@ Count Work
 Return number of zip file in ta dir
        and student data 
 """
+
 class CountWork:
     def __init__(self):
         self.__work = 0
-        self.__student_data = {"Un check job":[]}
+        self.__student_data = {"un_check_job":[]}
         
     @property
     def work(self):
@@ -40,15 +41,17 @@ class CountWork:
         filename = self.__read_name()
         stu_data = []
         for i in filename:
+            file_name = i
             stu_id,name,ex = self.__split_name(i)
-            stu_data.append({"student_id":stu_id,"name":name,"ex":ex})
+            stu_data.append({"file_name":file_name,"student_id":stu_id,"name":name,"ex":ex})
     
-        self.__student_data["Un check job"] = stu_data
+        self.__student_data["un_check_job"] = stu_data
     
     def __write_json(self):
         import json
         with open("example_dir/ex1/ta/job/un_check_job.json","w") as filehandel:
             json.dump(self.__student_data,filehandel)
+
     def run(self):
         self.__append_studata()
         self.__count()
