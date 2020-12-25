@@ -48,7 +48,6 @@ class CountWork:
     def __write_json(self):
         import json
         with open("example_dir/ex1/ta/job/un_check_job.json","w") as filehandel:
-            a = json.dumps(self.__student_data,indent=4)
             json.dump(self.__student_data,filehandel)
     def run(self):
         self.__append_studata()
